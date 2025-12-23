@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Toggler</title>
+    <title>Password show/hide</title>
+    <style>
+        .icon-toggle-password{
+            height: 40px;
+            cursor: pointer;
+        }
+        .input-password{
+            padding: 5px 10px;
+            font-size: 20px;
+            border: none;
+            background-color: #cceeff;
+        }
+        .input-password:focus{
+            outline: none;
+        }
+         .input-password-container{
+            border: 1px solid black;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            padding: 5px 20px;
+            border-radius: 50px;
+            margin: auto;
+        }
+        .heading{
+            text-align: center;
+            font-size: 40px;
+        }
+        .container{
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+            margin: 0 auto;
+            margin-top: 200px;
+            padding: 40px 20px;
+            display: flex;
+            border: 1px solid black;
+            background-color: #cceeff;
+        }
+        
+        </style>
 </head>
 <body>
-    <h1>Password Toggler</h1>
+    <div class="container">
+      <h1 class="heading">Password Toggler</h1>
+    <div class="input-password-container">
+        <input type="password" class="input-password" id="input-password">
+        <img src="hidden.png" class="icon-toggle-password" id="icon-toggle-password" />
+    </div>
+    </div>
 </body>
 </html>
