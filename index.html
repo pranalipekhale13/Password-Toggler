@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password show/hide</title>
     <style>
-        .icon-toggle-password{
+        .ico-toggle-password{
             height: 40px;
             cursor: pointer;
         }
@@ -29,6 +29,7 @@
         }
         .heading{
             text-align: center;
+            padding-bottom:25px;
             font-size: 40px;
         }
         .container{
@@ -37,7 +38,7 @@
             align-items: center;
             width: 400px;
             margin: 0 auto;
-            margin-top: 200px;
+            margin-top: 100px;
             padding: 40px 20px;
             display: flex;
             border: 1px solid black;
@@ -51,8 +52,17 @@
       <h1 class="heading">Password Toggler</h1>
     <div class="input-password-container">
         <input type="password" class="input-password" id="input-password">
-        <img src="hidden.png" class="icon-toggle-password" id="icon-toggle-password" />
+        <img src="hidden.png" class="ico-toggle-password" id="ico-toggle-password" onclick="togglepassword()" />
     </div>
     </div>
+    <script>
+        function togglepassword(){
+            const imgElement = document.getElementById('ico-toggle-password');
+            const inputElement = document.getElementById('input-password');
+            const isshow = imgElement.src.includes('eye.png');
+            inputElement.type = isshow ? 'text' : 'password';
+            imgElement.src = isshow ? 'hidden.png' : 'eye.png';
+        }
+    </script>
 </body>
 </html>
