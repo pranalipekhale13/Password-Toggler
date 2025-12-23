@@ -52,16 +52,16 @@
       <h1 class="heading">Password Toggler</h1>
     <div class="input-password-container">
         <input type="password" class="input-password" id="input-password">
-        <img src="hidden.png" class="ico-toggle-password" id="ico-toggle-password" onclick="togglepassword()" />
+        <img src="show.png" class="ico-toggle-password" id="ico-toggle-password" onclick="togglepassword()" />
     </div>
     </div>
     <script>
         function togglepassword(){
             const imgElement = document.getElementById('ico-toggle-password');
             const inputElement = document.getElementById('input-password');
-            const isshow = imgElement.src.includes('eye.png');
+            const isshow = imgElement.src.includes('show.png');
             inputElement.type = isshow ? 'text' : 'password';
-            imgElement.src = isshow ? 'hidden.png' : 'eye.png';
+            imgElement.src = isshow ? 'hidden.png' : 'show.png';
         }
     </script>
 </body>
